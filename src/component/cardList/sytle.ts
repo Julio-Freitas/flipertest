@@ -57,8 +57,10 @@ export const Detatil = styled.div`
 
 export const Text = styled.span<propsText>`
     display: block;
-    color: ${({ primary, theme }) => (primary ? theme.colors.primary : theme.colors.secondary)};
-    font-size: ${({ fontSize, theme }) => !!fontSize && theme.font.sizes[fontSize]};
+    color: ${({ primary, theme }) =>
+        primary ? theme.colors.primary : theme.colors.secondary};
+    font-size: ${({ fontSize, theme }) =>
+        !!fontSize && theme.font.sizes[fontSize]};
     font-weight: ${({ fontWeight }) => fontWeight || 'normal'};
 
     ${({ paddingTop, paddingRight, paddingBottom, paddingLeft, theme }) =>

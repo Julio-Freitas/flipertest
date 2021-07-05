@@ -25,11 +25,11 @@ const ListCard = ({ list, limit }: propsList): JSX.Element => {
                         id={item.id}
                         key={item.id}
                         invested_value={formatMoney('pt-br', item.total, 'BRL')}
-                        // rentability={item.profitability
-                        //     .toFixed(2)
-                        //     .replace(/\./g, ',')}
-                        // // cdi={item.cdi.toFixed(2).replace(/\./g, ',')}
-                        // // gain={formatMoney('pt-br', item.gain, 'BRL')}
+                        rentability={item.profitability
+                            .toFixed(2)
+                            .replace(/\./g, ',')}
+                        cdi={item.cdi.toFixed(2).replace(/\./g, ',')}
+                        gain={formatMoney('pt-br', item.gain, 'BRL')}
                         datail={false}
                     />
                 ))

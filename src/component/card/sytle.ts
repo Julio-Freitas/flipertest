@@ -34,17 +34,19 @@ export const MenuIcon = styled.div`
     width: 100px;
     border: 1px solid #ccc;
     height: 22px;
-    padding: 0 10px;
+    padding: 5px 10px;
     font-weight: bold;
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.colors.primary};
     border-radius: 5px;
-    background-color: ${({ theme }) => theme.backgournd};
+    background-color: #fff;
     cursor: pointer;
     transition: ease-in 0.5s;
+    box-shadow: rgb(154 163 188) 0px 0px 7px;
     &:hover {
-        font-size: ${({ theme }) => theme.font.sizes.medium};
+        background-color: ${({ theme }) => theme.backgournd};
+        text-decoration: underline;
     }
 `;
 

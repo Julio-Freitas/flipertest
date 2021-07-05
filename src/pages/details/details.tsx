@@ -35,26 +35,30 @@ const Home = (): JSX.Element => {
                 <Styled.ContainerCard>
                     <Skeleton
                         height={30}
-                        style={{ marginTop: 20 }}
+                        style={{ marginTop: 20, boxSizing: 'border-box' }}
                         width={100}
                         count={1}
                     />
                     <Skeleton
                         height={40}
-                        style={{ marginTop: 20 }}
-                        width={344}
+                        style={{ marginTop: 20, boxSizing: 'border-box' }}
+                        width="100%"
                         count={1}
                     />
                     <Skeleton
                         height={60}
-                        style={{ marginTop: 20 }}
-                        width={344}
+                        style={{ marginTop: 20, boxSizing: 'border-box' }}
+                        width="100%"
                         count={1}
                     />
                     <Skeleton
                         height={30}
-                        style={{ marginTop: 20, float: 'right' }}
-                        width={110}
+                        style={{
+                            marginTop: 20,
+                            float: 'right',
+                            boxSizing: 'border-box',
+                        }}
+                        width="100%"
                         count={1}
                     />
                 </Styled.ContainerCard>
