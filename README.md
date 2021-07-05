@@ -14,10 +14,11 @@ I used the follow libs:
  - Jest
  - react-loading-skeleton
 
-## Start APP
+## Start APP step-by-step
 
 In the project directory, you can run:
 ```
+git clone git@github.com:Julio-Freitas/flipertest.git
 yarn
 yarn lint
 yarn start
