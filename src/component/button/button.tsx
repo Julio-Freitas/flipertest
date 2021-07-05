@@ -8,7 +8,10 @@ type PropsButton = {
 };
 
 const Button = (props: PropsButton): ReactElement<PropsButton> => (
-    <Styled.Button {...props} onClick={(event: MouseEvent) => props.onClick && props.onClick(event)}>
+    <Styled.Button
+        {...props}
+        onClick={(event: MouseEvent) => props.onClick && props.onClick(event)}
+    >
         {props?.text}
     </Styled.Button>
 );

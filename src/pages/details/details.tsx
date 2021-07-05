@@ -26,15 +26,37 @@ const Home = (): JSX.Element => {
     const hitory: HistoryType = useHistory();
 
     if (hitory && hitory.location.state.id) {
-        const { data, loading, error } = useQuery(queries.FoundById, { variables: { id: hitory.location.state.id } });
+        const { data, loading, error } = useQuery(queries.FoundById, {
+            variables: { id: hitory.location.state.id },
+        });
 
         if (loading) {
             return (
                 <Styled.ContainerCard>
-                    <Skeleton height={30} style={{ marginTop: 20 }} width={100} count={1} />
-                    <Skeleton height={40} style={{ marginTop: 20 }} width={344} count={1} />
-                    <Skeleton height={60} style={{ marginTop: 20 }} width={344} count={1} />
-                    <Skeleton height={30} style={{ marginTop: 20, float: 'right' }} width={110} count={1} />
+                    <Skeleton
+                        height={30}
+                        style={{ marginTop: 20 }}
+                        width={100}
+                        count={1}
+                    />
+                    <Skeleton
+                        height={40}
+                        style={{ marginTop: 20 }}
+                        width={344}
+                        count={1}
+                    />
+                    <Skeleton
+                        height={60}
+                        style={{ marginTop: 20 }}
+                        width={344}
+                        count={1}
+                    />
+                    <Skeleton
+                        height={30}
+                        style={{ marginTop: 20, float: 'right' }}
+                        width={110}
+                        count={1}
+                    />
                 </Styled.ContainerCard>
             );
         }
@@ -42,7 +64,8 @@ const Home = (): JSX.Element => {
             return <h1>Error...</h1>;
         }
 
-        const { cdi, gain, id, profitability, total } = data.wealthSummary_by_pk as propsCard;
+        const { cdi, gain, id, profitability, total } =
+            data.wealthSummary_by_pk as propsCard;
         return (
             <Styled.ContainerCard>
                 <Card

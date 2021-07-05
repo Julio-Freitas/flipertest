@@ -14,7 +14,14 @@ export type PropsCommentsProps = {
     cdi?: string;
     datail?: boolean;
 };
-const Card = ({ invested_value, rentability, gain, cdi, id, datail }: PropsCommentsProps): JSX.Element => {
+const Card = ({
+    invested_value,
+    rentability,
+    gain,
+    cdi,
+    id,
+    datail,
+}: PropsCommentsProps): JSX.Element => {
     const [menu, setMenu] = useState(false);
 
     const redirectToId = (): void => {
@@ -31,8 +38,15 @@ const Card = ({ invested_value, rentability, gain, cdi, id, datail }: PropsComme
                 </Styled.Text>
                 {!datail && (
                     <Styled.Icon tabIndex={0} onBlur={() => setMenu(false)}>
-                        {menu && <Styled.MenuIcon onClick={redirectToId}>Ver card</Styled.MenuIcon>}
-                        <IconMore onClick={() => setMenu(!menu)} />
+                        {menu && (
+                            <Styled.MenuIcon onClick={redirectToId}>
+                                Ver card
+                            </Styled.MenuIcon>
+                        )}
+                        <IconMore
+                            onClick={() => setMenu(!menu)}
+                            data-testid="click-menu"
+                        />
                     </Styled.Icon>
                 )}
             </Styled.Header>
@@ -40,33 +54,56 @@ const Card = ({ invested_value, rentability, gain, cdi, id, datail }: PropsComme
                 <Styled.Text fontSize="large" paddingTop="small">
                     Valor investido
                 </Styled.Text>
-                <Styled.Text fontSize="large" primary fontWeight="bold" paddingTop="small">
+                <Styled.Text
+                    fontSize="large"
+                    primary
+                    fontWeight="bold"
+                    paddingTop="small"
+                >
                     {invested_value}
                 </Styled.Text>
-                <Styled.Detatil>
-                    <Styled.Text fontSize="medium" paddingTop="small">
-                        Rendabilidade/mês
-                    </Styled.Text>
-                    <Styled.Text fontWeight="bold" paddingTop="small" fontSize="large" primary>
-                        {rentability}
-                    </Styled.Text>
-                </Styled.Detatil>
-                <Styled.Detatil>
-                    <Styled.Text fontSize="medium" paddingTop="small">
-                        CDI
-                    </Styled.Text>
-                    <Styled.Text fontWeight="bold" fontSize="large" primary>
-                        {cdi}%
-                    </Styled.Text>
-                </Styled.Detatil>
-                <Styled.Detatil>
-                    <Styled.Text fontSize="medium" paddingTop="small">
-                        Ganho/mês
-                    </Styled.Text>
-                    <Styled.Text fontWeight="bold" paddingTop="small" fontSize="large" primary>
-                        {gain}
-                    </Styled.Text>
-                </Styled.Detatil>
+                {rentability && (
+                    <Styled.Detatil>
+                        <Styled.Text fontSize="medium" paddingTop="small">
+                            Rendabilidade/mês
+                        </Styled.Text>
+                        <Styled.Text
+                            fontWeight="bold"
+                            paddingTop="small"
+                            fontSize="large"
+                            primary
+                        >
+                            {rentability}
+                        </Styled.Text>
+                    </Styled.Detatil>
+                )}
+
+                {cdi && (
+                    <Styled.Detatil>
+                        <Styled.Text fontSize="medium" paddingTop="small">
+                            CDI
+                        </Styled.Text>
+                        <Styled.Text fontWeight="bold" fontSize="large" primary>
+                            {cdi}%
+                        </Styled.Text>
+                    </Styled.Detatil>
+                )}
+
+                {gain && (
+                    <Styled.Detatil>
+                        <Styled.Text fontSize="medium" paddingTop="small">
+                            Ganho/mês
+                        </Styled.Text>
+                        <Styled.Text
+                            fontWeight="bold"
+                            paddingTop="small"
+                            fontSize="large"
+                            primary
+                        >
+                            {gain}
+                        </Styled.Text>
+                    </Styled.Detatil>
+                )}
             </Styled.Content>
             <Styled.Separator />
             {datail && (

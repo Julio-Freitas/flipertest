@@ -15,7 +15,7 @@ export const theme = {
         sizes: {
             small: '1em',
             medium: '1.38em',
-            large: '1.56em',
+            large: '2em',
         },
     },
 };
