@@ -49,9 +49,6 @@
             "last 1 safari version"
         ]
     },
-    "resolutions": {
-        "styled-components": "^5"
-    },
     "devDependencies": {
         "@types/react-router-dom": "^5.1.7",
         "@typescript-eslint/eslint-plugin": "^4.28.1",
@@ -67,5 +64,8 @@
         "eslint-plugin-react": "^7.24.0",
         "eslint-plugin-react-hooks": "^4.2.0",
         "prettier": "^2.3.2"
+    },
+    "resolutions": {
+        "styled-components": "^5"
     }
 }
