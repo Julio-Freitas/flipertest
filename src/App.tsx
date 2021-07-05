@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router } from 'react-router-dom';
+import { ApolloProvider } from 'react-apollo';
+import { ThemeProvider } from 'styled-components';
+import Routes from './routes/routing';
+import history from './services/history';
+import api from './services/api';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { GlobalStyles } from './styles/global-style';
+import { theme } from './styles/theme';
+
+const App = (): JSX.Element => {
+    return (
+        <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <ApolloProvider client={api}>
+                <Router history={history}>
+                    <Routes />
+                </Router>
+            </ApolloProvider>
+        </ThemeProvider>
+    );
+};
 
 export default App;
