@@ -13,25 +13,23 @@ type propsText = {
     paddingLeft?: SizeTypes;
 };
 
+type PropsMenu = {
+    visibility: string;
+};
+
+type PropsIcon = {
+    status: boolean;
+};
 export const Header = styled.div`
     padding-top: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
 `;
-export const Icon = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    svg {
-        cursor: pointer;
-    }
-`;
-export const MenuIcon = styled.div`
+
+export const MenuIcon = styled.div<PropsMenu>`
     position: absolute;
     right: 14px;
-    width: 100px;
     border: 1px solid #ccc;
     height: 22px;
     padding: 5px 10px;
@@ -44,10 +42,41 @@ export const MenuIcon = styled.div`
     cursor: pointer;
     transition: ease-in 0.5s;
     box-shadow: rgb(154 163 188) 0px 0px 7px;
+    opacity: 0;
+    visibility: ${({ visibility }) => visibility};
+    width: 0;
     &:hover {
         background-color: ${({ theme }) => theme.backgournd};
         text-decoration: underline;
     }
+`;
+
+export const Icon = styled.div<PropsIcon>`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    svg {
+        cursor: pointer;
+    }
+    ${({ status }) =>
+        status &&
+        `
+        &:focus {
+          width: 190px;
+          flex-direction: row-reverse;
+      }
+
+      &:focus ${MenuIcon} {
+          visibility: visible;
+          transition: ease-in-out 0.5s;
+          opacity: 1 !important;
+          width: 100px;
+          margin-right: 5px;
+      }
+
+    `}
 `;
 
 export const Content = styled.div`

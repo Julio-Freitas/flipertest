@@ -37,12 +37,18 @@ const Card = ({
                     Seu Resumo
                 </Styled.Text>
                 {!datail && (
-                    <Styled.Icon tabIndex={0} onBlur={() => setMenu(false)}>
-                        {menu && (
-                            <Styled.MenuIcon onClick={redirectToId}>
-                                Ver card
-                            </Styled.MenuIcon>
-                        )}
+                    <Styled.Icon
+                        tabIndex={0}
+                        onBlur={() => setMenu(false)}
+                        status={menu}
+                    >
+                        <Styled.MenuIcon
+                            onClick={redirectToId}
+                            visibility={menu ? 'visible' : 'hidden'}
+                        >
+                            Ver card
+                        </Styled.MenuIcon>
+
                         <IconMore
                             onClick={() => setMenu(!menu)}
                             data-testid="click-menu"
