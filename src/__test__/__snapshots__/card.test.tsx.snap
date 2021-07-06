@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test component Card Test snapshot of Card 1`] = `
+<div>
+  <div
+    className="sc-gtsrHT cwdsL"
+  >
+    <span
+      className="sc-gKAaRy hhcfKr"
+      fontSize="large"
+      fontWeight="bold"
+    >
+      Seu Resumo
+    </span>
+    <div
+      className="sc-dlnjwi sDJSC"
+      onBlur={[Function]}
+      tabIndex={0}
+    >
+      <svg
+        data-testid="click-menu"
+        onClick={[Function]}
+      >
+        more_cion.svg
+      </svg>
+    </div>
+  </div>
+  <div
+    className="sc-eCApnc jnBVpW"
+  >
+    <span
+      className="sc-gKAaRy gzygRA"
+      fontSize="large"
+    >
+      Valor investido
+    </span>
+    <span
+      className="sc-gKAaRy blqEoM"
+      fontSize="large"
+      fontWeight="bold"
+    >
+      R$3.200,00
+    </span>
+    <div
+      className="sc-jSFjdj gHXOVH"
+    >
+      <span
+        className="sc-gKAaRy iPyIma"
+        fontSize="medium"
+      >
+        Rendabilidade/mês
+      </span>
+      <span
+        className="sc-gKAaRy blqEoM"
+        fontSize="large"
+        fontWeight="bold"
+      >
+        R$10,00
+      </span>
+    </div>
+    <div
+      className="sc-jSFjdj gHXOVH"
+    >
+      <span
+        className="sc-gKAaRy iPyIma"
+        fontSize="medium"
+      >
+        CDI
+      </span>
+      <span
+        className="sc-gKAaRy hhcfKr"
+        fontSize="large"
+        fontWeight="bold"
+      >
+        3.0
+        %
+      </span>
+    </div>
+    <div
+      className="sc-jSFjdj gHXOVH"
+    >
+      <span
+        className="sc-gKAaRy iPyIma"
+        fontSize="medium"
+      >
+        Ganho/mês
+      </span>
+      <span
+        className="sc-gKAaRy blqEoM"
+        fontSize="large"
+        fontWeight="bold"
+      >
+        5.0
+      </span>
+    </div>
+  </div>
+  <hr
+    className="sc-iCoGMd hTrwoP"
+  />
+</div>
+`;

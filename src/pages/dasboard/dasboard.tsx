@@ -16,14 +16,41 @@ const Home = (): JSX.Element => {
         return (
             <Styled.ContainerCard>
                 <Styled.TextLoading>CARREGANDO.....</Styled.TextLoading>
-                <Skeleton height={30} style={{ marginTop: 20 }} width={100} count={1} />
-                <Skeleton height={40} style={{ marginTop: 20 }} width={344} count={1} />
-                <Skeleton height={60} style={{ marginTop: 20 }} width={344} count={1} />
-                <Skeleton height={30} style={{ marginTop: 20, float: 'right' }} width={110} count={1} />
+                <Skeleton
+                    height={30}
+                    style={{ marginTop: 20, boxSizing: 'border-box' }}
+                    width={100}
+                    count={1}
+                />
+                <Skeleton
+                    height={40}
+                    style={{ marginTop: 20 }}
+                    width="100%"
+                    count={1}
+                />
+                <Skeleton
+                    height={60}
+                    style={{ marginTop: 20, boxSizing: 'border-box' }}
+                    width="100%"
+                    count={1}
+                />
+                <Skeleton
+                    height={30}
+                    style={{
+                        marginTop: 20,
+                        float: 'right',
+                        boxSizing: 'border-box',
+                    }}
+                    width={110}
+                    count={1}
+                />
             </Styled.ContainerCard>
         );
 
-    if (error) return <Styled.TextLoading>Algo de errado aconteceu!</Styled.TextLoading>;
+    if (error)
+        return (
+            <Styled.TextLoading>Algo de errado aconteceu!</Styled.TextLoading>
+        );
 
     const changePrev = (prev: number): number => {
         const canPrev = prev + 1 <= data?.wealthSummary.length;
@@ -42,7 +69,13 @@ const Home = (): JSX.Element => {
         <Styled.ContainerCard>
             <CardList list={data?.wealthSummary} limit={showMore} />
             {showMore < data?.wealthSummary.length ? (
-                <Button type="button" text="Ver Mais" onClick={_handleShowMore} data-after="Ver " data-before=" Mais" />
+                <Button
+                    type="button"
+                    text="Ver Mais"
+                    onClick={_handleShowMore}
+                    data-after="Ver "
+                    data-before=" Mais"
+                />
             ) : (
                 <Button
                     type="button"
