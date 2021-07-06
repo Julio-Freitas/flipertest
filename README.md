@@ -4,7 +4,7 @@
 
 This project was created to apply in one  job opportunity.
 ## where can see to application?
-> [Click here]( https://filpertestfront.netlify.app/)
+> <img src="https://cdn.icon-icons.com/icons2/849/PNG/512/browser_globe_internet_icon-icons.com_67284.png"  alt="Logo" align="top" width="30" /> [Click here]( https://filpertestfront.netlify.app/)
 
 
 ## What did i use?
@@ -26,7 +26,7 @@ yarn lint
 yarn start
 ```
 
-## Running  testsa
+## Running  tests
 ```
 yarn test
 ```
