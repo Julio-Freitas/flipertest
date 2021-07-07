@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { ReactComponent as IconMore } from '../../assests/svg/more_cion.svg';
-import history from '../../services/history';
+import { ReactComponent as IconMore } from 'assests/svg/more_cion.svg';
+import history from 'services/history';
 import { Button } from '../button';
 
 import * as Styled from './sytle';

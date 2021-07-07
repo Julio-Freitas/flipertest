@@ -1,7 +1,7 @@
-import { Button } from '../../component/button';
+import { Button } from 'component/button';
 
 import * as Styled from './style';
-import history from '../../services/history';
+import history from 'services/history';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { useEffect, useState } from 'react';
 

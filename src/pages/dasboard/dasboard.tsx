@@ -1,9 +1,9 @@
 import { useQuery } from '@apollo/react-hooks';
 import { useState } from 'react';
-import * as queries from '../../services/querries';
+import * as queries from 'services/querries';
 
-import { CardList } from '../../component/cardList';
-import { Button } from '../../component/button';
+import { CardList } from 'component/cardList';
+import { Button } from 'component/button';
 import Skeleton from 'react-loading-skeleton';
 
 import * as Styled from './style';

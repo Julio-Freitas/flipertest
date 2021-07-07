@@ -1,8 +1,8 @@
 import { useQuery } from 'react-apollo';
-import * as queries from '../../services/querries';
+import * as queries from 'services/querries';
 import { useHistory } from 'react-router-dom';
-import { Card } from '../../component/card';
-import formatMoney from '../../utils/formatMoney';
+import { Card } from 'component/card';
+import formatMoney from 'utils/formatMoney';
 import Skeleton from 'react-loading-skeleton';
 
 import * as Styled from './style';
